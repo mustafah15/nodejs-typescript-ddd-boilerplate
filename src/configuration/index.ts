@@ -7,6 +7,8 @@ dotenv.config();
  * like the environment vars, in one place so they are not scattered all over the whole codebase
  */
 export const config = {
-  connectionString: process.env.DATABASE_CONNECTION_STRING,
+  connectionString:
+    process.env.DATABASE_CONNECTION_STRING ||
+    'mongodb://127.0.0.1:27017/template',
   port: process.env.PORT || 3000,
 };

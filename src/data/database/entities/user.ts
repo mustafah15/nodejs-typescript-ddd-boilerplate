@@ -17,13 +17,4 @@ export const UserSchema = new mongoose.Schema({
   age: Number,
 });
 
-UserSchema.methods.toUser = function toUser(): User {
-  const name = `${this.firstName} ${this.lastName}`;
-  return {
-    name,
-    age: this.age,
-    id: this._id,
-  };
-};
-
 export const UserDao = mongoose.model<UserEntity>('User', UserSchema);
