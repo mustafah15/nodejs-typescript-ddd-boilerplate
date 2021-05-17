@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  web:
+    build: .
+    ports:
+      - '3000:3000'
+    env_file: .env
+    environment:
+      - DATABASE_CONNECTION_STRING=mongodb://db:27017/nodejsapparch
+    depends_on:
+      - db
+    volumes:
+      - .:/home/nodejs/src
+  db:
+    image: mongo:latest
+    ports:
+      - '27017:27017'
+    env_file: .env
