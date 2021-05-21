@@ -8,7 +8,7 @@ const upload = multer({ dest: 'uploads/' });
 
 export function uploadRoute() {
   router.post(
-    '/profile',
+    '/file',
     upload.single('file'),
     asyncWrapper(async (_req: Request, res: Response) => {
       // req.file is the `avatar` file

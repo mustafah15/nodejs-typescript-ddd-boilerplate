@@ -1,8 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { UsersService } from '../domain/users/usersService';
-import { errorHandler } from './routes/error';
+import { errorHandler } from '../utils/middlewares/error-handlers';
 import { userRoute } from './routes/user';
+
 
 const app = express();
 app.use(bodyParser.json());
