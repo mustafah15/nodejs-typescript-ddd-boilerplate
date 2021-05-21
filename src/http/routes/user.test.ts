@@ -31,5 +31,18 @@ describe('user route test', () => {
 
       expect(user).toEqual(userData);
     });
+
+    it('should return 400 when invalid body', async () => {
+      const {
+        body: { message, details },
+      } = await request(app)
+        .post('/users')
+        .send({})
+        .expect(400);
+
+      expect(message).toEqual('Invalid Request');
+      expect(details[0]).toHaveProperty('message', 'Invalid value');
+      expect(details[0]).toHaveProperty('field', 'firstName');
+    });
   });
 });
