@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express';
 import { body } from 'express-validator';
 import { asyncWrapper } from '../utils/asyncWrapper';
 import { UsersService } from '../../domain/users/usersService';
-import { validationRequest } from '../../utils/middlewares/validate-request';
+import { validationRequest } from '../../utils';
 
 const router = express.Router();
 

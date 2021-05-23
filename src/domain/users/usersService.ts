@@ -11,8 +11,7 @@ export class UsersService {
   constructor(private readonly userRepository: UserRepository) {}
 
   async getAllUsers() {
-    const users = await this.userRepository.getAll();
-    return users;
+    return this.userRepository.getAll();
   }
 
   async createUser(
