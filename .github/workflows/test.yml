@@ -27,6 +27,3 @@ jobs:
     - run: npm install && npm run lint
     - run: npm run depcheck
     - run: npm run test
-    env:
-      DB_URI: ${{ secrets.DB_URI }}
-
