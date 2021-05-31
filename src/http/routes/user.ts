@@ -18,9 +18,7 @@ export function userRoute(userService: UsersService) {
         .isString()
         .notEmpty()
         .withMessage('last name is required'),
-      body('age')
-        .isNumeric()
-        .withMessage('age is required'),
+      body('age').isNumeric().withMessage('age is required'),
     ],
     validationRequest,
     asyncWrapper(async (req: Request, res: Response) => {

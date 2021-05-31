@@ -15,7 +15,7 @@ export class RequestValidationError extends CustomError {
   serializeErrors() {
     return {
       message: this.message,
-      details: this.details.map(err => {
+      details: this.details.map((err) => {
         return { message: err.msg, field: err.param };
       }),
     };
