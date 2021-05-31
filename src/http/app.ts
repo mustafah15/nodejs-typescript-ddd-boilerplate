@@ -4,7 +4,6 @@ import { UsersService } from '../domain/users/usersService';
 import { errorHandler } from '../utils/middlewares/error-handlers';
 import { userRoute } from './routes/user';
 
-
 const app = express();
 app.use(bodyParser.json());
 
