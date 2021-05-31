@@ -13,7 +13,7 @@
     "prettier": "prettier --list-different './src/**/*.ts'",
     "clean": "rimraf dist",
     "test": "jest",
-    "depcheck": "./node_modules/.bin/npm-check",
+    "depcheck": "./node_modules/.bin/npm-check --ignore eslint-config-prettier",
     "lint": "eslint src --ext .ts"
   },
   "lint-staged": {
